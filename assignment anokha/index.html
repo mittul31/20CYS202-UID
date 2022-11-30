@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration Page</title>
+  <style>
+    *,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #56c080;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+</style>
+    <link rel="stylesheet" href="C:\Users\mitul\Desktop\form3.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  <link rel="icon" href="C:\Users\mitul\Desktop\favicon.jpeg">
+</head>
+<body>
+<img src="C:\Users\mitul\Desktop\logo-colored.svg" alt="Amrita">
+  <div class="columnright" >
+    <center>
+    <h1 id= "title" style="color:green"> Registration Form</h1></center>
+    <center>
+    <form class= "form">
+      <label for= "name" style="color:green" ><b>First Name</b></label>
+      <div>
+      <input type= "text" placeholder="Enter Your First name" name="name" class="space" required>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Last Name</b></label>
+      <div>
+      <input type= "text" placeholder="Enter Your Last name" name="name" class="space" required>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>University Name</b></label>
+      <div>
+      <input type= "text" placeholder="Enter Your University Name" name="name" class="space" required>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Line Up </b></label>
+      <div>
+        <input type= "text" id="name" onchange="NameCheck()" placeholder="Enter your Team Name" name="name" class="space" required>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Degree</b></label>
+      <div>
+        <select name="books" id="dropdown">
+          <option value="no input ">Select your Degree</option>  
+          <option value="CSE">CSE</option>  
+          <option value="AIE">AIE</option>  
+          <option value="CYS">CYS</option>  
+          <option value="EEE">EEE</option>  
+          <option value="MECH">MECH</option>  
+          <option value="ELC">ELC</option>
+          <option value="ARE">ARE</option>
+          <option value="CHEM">CHEM</option>
+          <option value="CIVIL">CIVIL</option>
+      
+      </select>
+      </div>
+      <br> <br>
+      <label for= "name" style="color:green;" ><b>Academic Term</b></label>
+      <div>
+        <div>
+          <input type="radio" id="make" name="gender" value="male">
+          <label for="html">1st Year B.Tech</label><br>
+          <input type="radio" id="css" name="gender" value="female">
+          <label for="css">2nd Year B.Tech</label><br>
+          <input type="radio" id="others" name="gender" value="others">
+          <label for="javascript">3rd Year B.Tech</label><br>
+          <input type="radio" id="others" name="gender" value="others">
+          <label for="javascript">4th Year B.Tech</label><br>
+          <input type="radio" id="others" name="gender" value="others">
+          <label for="javascript">M.Tech </label>
+        </div>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Select Your Technical Domain</b></label>
+      <div>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">Capture the Flag</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2">Competitive Coding  </label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">Vulnerability Assessment and Penetration Testing </label><br>  
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">Bug Bounties</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3">Artifical Intelligence & Machine Learning</label><br>
+      </div><br>
+      <label for="phone" style="color:green;"><b>Phone Number:</b></label>
+      <div>
+        <input type="number" id="phonenumber" onchange="PhoneNumberCheck()" name="name" class="space" placeholder="Enter your Phone Number" required>      
+      </div>
+      <div><br>
+      <label for= "email" style="color:green;"><b>Mail ID</b></label>
+      </div>
+      <div>
+        <input type= "text" id="email" onchange="ValidateEmail()" placeholder="Enter Your Mail ID" name="name" class="space" required>
+    </div><br>
+      <label for= "start" style="color:green;"><b>Date :</b></label>
+      <div>
+      <input type="date" id="start" name="start-date"
+      value= "2020-06-29" min="1997-06-29" max="2021-06-29" class= "space" required>
+      </div><br>
+      <label for= "availability" style="color:green;"><b> Choose Your Gender</b></label>
+      <div>
+        <input type="radio" id="make" name="gender" value="male">
+        <label for="html">Male</label>  
+        <input type="radio" id="css" name="gender" value="female">
+        <label for="css">Female</label>
+        <input type="radio" id="others" name="gender" value="others">
+        <label for="javascript">Others</label>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Username</b></label>
+      <div>
+      <input type= "text" placeholder="Enter Your Username" name="name" class="space" required>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Password</b></label>
+      <div>
+      <input type= "password" id="password" placeholder="Enter Your Password" name="name" class="space" required>
+      </div><br>
+      <label for= "name" style="color:green;" ><b>Confirm Password</b></label>
+      <div>
+      <input type= "password" id="confirm password" placeholder="Reconfirm your password" name="name" class="space" required>
+      </div><br>
+      <div>
+        <br>
+        <center><label for= "name" style="color:green;" ><b>College Address</b></label></center>
+        <textarea id="website" name="anokhafeedback" rows="4" cols="50" required>
+        </textarea>
+      </div>
+      <br> <br>
+      <center><label for= "name" style="color:green;" ><b>Upload your College ID Card:</b></label></center>
+      <br><br>
+      <center>
+  <input type="file" id="myfile" name="myfile" required><br><br></center>
+  <center><label for= "name" style="color:green;" ><b>Upload your Achieved Event Certifications</b></label></center>
+      <br><br>
+      <center>
+  <input type="file" id="myfile" name="myfile" required><br><br></center>
+  <center><label for= "name" style="color:green;" ><b>Click Here To Get Notifications about the Event !</b></label></center>
+  <br>
+  <label class="toggle">
+    <input class="toggle-checkbox" type="checkbox">
+    <div class="toggle-switch"></div>
+    <span class="toggle-label"></span>
+  </label>
+  <br>
+  <br>
+  <br>
+  <input type="checkbox" id="terms" name="term" required>
+        <label or= "name" style="color:green;" for="vehicle2"><b>Create an Account By Agreeing to our Terms and Conditions</b></label><br>
+      <br>
+      
+      <center>
+        <br>
+        <br>
+        <center>
+        <button type= "submit" id= "submit">Register</button></center>
+        </div>
+      </center>
+      </form>
+    </div>
+    </div>
+  </center>
+  <script src="C:\Users\mitul\Desktop\script.js"></script>
+</body>
+
+</html>
