@@ -166,8 +166,6 @@ span{
     margin-inline-start: 180px;
     background-color: rgba(255, 255, 255, 0.1);
     margin-bottom: 75px;
-
-
 }
 .social a:hover{
     transform: scale(1.1);
@@ -175,6 +173,99 @@ span{
     transition: .4s;
 
 }
+.form {
+    margin: 0 auto;
+    max-width: 16rem;
+    overflow: auto;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+    .form-control input {
+        border: 1px solid transparent;
+        border-bottom-color: white;
+        background-color: transparent;
+        color: white;
+        border-radius: 0;
+        font-family: inherit;
+        font-size: 14px;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .form-control input:focus {
+            outline: 0;
+            border-bottom-color: #777;
+        }
+
+    .form-control.success input {
+        border-bottom-color: white;
+    }
+
+    .form-control.error input {
+        border-bottom-color: rgb(255, 255, 255);
+    }
+
+    .form-control i {
+        visibility: hidden;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+    }
+
+    .form-control.success i.fa-check-circle {
+        color: white;
+        visibility: visible;
+    }
+
+    .form-control.error i.fa-times-circle {
+        color: white;
+        visibility: visible;
+    }
+
+    .form-control small {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+    }
+
+    .form-control.error small {
+        visibility: visible;
+    }
+
+.form button {
+    border-radius: 15px;
+    color: black;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.form-control button:focus {
+            outline: 0;
+            border-bottom-color: #777;
+        }
+
+.credit{
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wrapper{
+    margin-top: -2%;
+}
+
+.credit a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}  
+            
 .footer{
     background-color: black;
 }
@@ -221,6 +312,41 @@ span{
         </div>
         </div>
         </div>
+        </div>
+         <div class="wrapper">
+            </div>
+            <form id="form" class="form">
+                <div class="form-control">
+                    <input type="text" placeholder="Enter name" id="name" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-times-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <input type="email" placeholder="Enter email" id="email" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-times-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <input type="text" placeholder="Enter your College Name " id="college" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-times-circle"></i>
+                    <br><br>
+                <div class="form-control-1">
+                    <input type="text" placeholder="College Roll Number" id="password"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-times-circle"></i>
+                    <small>Error message</small>
+                    <br><br>
+                </div>
+                <div class="form-control">
+                    <input type="number" placeholder="Enter your Phone Number " id="phone" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-times-circle"></i>
+                    <small>Error message</small>
+                <button>Submit</button>
+            </form>
         </div>
         </section>
         <footer>
